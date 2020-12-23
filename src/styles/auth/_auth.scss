@@ -1,0 +1,93 @@
+.auth__container {
+  margin-top: 5rem;
+  @include flexCenter();
+}
+
+.auth__form {
+  @include flexCenter();
+  width: 90%;
+  @include boxShadow;
+}
+
+@media (min-width: 768px) {
+  .auth__container {
+    height: 100vh;
+    margin-top: 0;
+  }
+  .auth__form {
+    width: 50rem;
+  }
+}
+
+.auth__form-container {
+  margin: 3rem;
+  @include flexCenter();
+  flex-direction: column;
+  padding: 1rem;
+  width: 100%;
+}
+
+.auth__h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.auth__box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0.5rem 0;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+.auth__form-p {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1.5rem 0;
+}
+.auth__input {
+  height: 3.5rem;
+  font-size: 1.8rem;
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: 0.4rem;
+  margin: 1.5rem 0;
+  width: 100%;
+  @include boxShadow();
+  outline: none;
+}
+
+.auth__btn {
+  height: 4rem;
+  width: 100%;
+  margin-bottom: 4rem;
+  background-color: $primary;
+  color: $white;
+  border-radius: 0.3rem;
+  transition: ease 0.4s;
+  @include boxShadow();
+  &:hover {
+    background-color: darken($color: $primary, $amount: 0.4);
+    cursor: pointer;
+    transition: ease 0.4s;
+  }
+}
+
+.auth__line {
+  height: 0.1rem;
+  width: 100%;
+  background-color: lightgray;
+  margin-bottom: 4rem;
+}
+
+.auth__verify {
+  width: 100%;
+  @include flexSpace();
+}
+
+.auth__account {
+  font-size: 2rem;
+  color: blue;
+}

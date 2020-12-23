@@ -1,0 +1,128 @@
+.operation__container-total {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: 0 auto;
+}
+.operation__box-img {
+  height: 4rem;
+  margin: 0 auto;
+}
+
+.operation__new {
+  @include flexCenter();
+  font-size: 6rem;
+  color: green;
+  &:hover {
+    cursor: pointer;
+    color: darken($color: green, $amount: 0.5);
+  }
+}
+.operation__container {
+  margin-top: 2rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  width: 80%;
+  margin: 2rem auto;
+}
+.operation__type-container {
+  background-color: $primary;
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.operation__container-info {
+  display: flex;
+  padding: 3rem;
+  flex-direction: column;
+}
+.operation__type {
+  font-size: 2rem;
+  color: white;
+}
+.operation__id {
+  font-size: 2rem;
+  color: white;
+  font-weight: 600;
+}
+.operation__concept,
+.operation__amount,
+.operation__date {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.operation__box {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.operation__box-p {
+  display: flex;
+  padding: 0.8rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.operation__box-ps {
+  font-weight: 600;
+}
+.operation__edit,
+.operation__delete {
+  font-size: 2rem;
+  color: green;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.operation__delete {
+  color: red;
+}
+
+@media (min-width: 768px) {
+  .operation__container-total {
+    @include flexSpace();
+    width: 80%;
+    margin: 0 auto;
+    padding: 5rem;
+  }
+
+  .operation {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    width: 80%;
+    margin: 2rem auto;
+  }
+
+  .operation__box {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .operation__box-p {
+    margin-left: 3rem;
+    height: 10rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .operation__box-img {
+    height: 10rem;
+  }
+  .operation__edit {
+    font-size: 2rem;
+    color: green;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
